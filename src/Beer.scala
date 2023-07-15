@@ -4,6 +4,10 @@ object Beer {
 
     val authorsToAge = Map("Raoul" -> 23, "Mario" -> 40, "Alan" -> 53)
     val authors = List("Raouol", "Mario", "Alan")
+
     val numbers = Set(1, 2, 3, 4)
+    val newNumbers = numbers + 6
+    println(newNumbers)
+    println(numbers)
   }
 }

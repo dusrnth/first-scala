@@ -1,3 +1,5 @@
+import scala.io.Source
+
 object Beer {
   def main(args: Array[String])= {
     2 to 6 foreach { n => println(s"$n bottles of beer on the wall")}
@@ -9,5 +11,9 @@ object Beer {
     val newNumbers = numbers + 6
     println(newNumbers)
     println(numbers)
+
+    val fileLines = Source.fromFile("data.txt").getLines().toList
+    val linesLongUpper = fileLines.filter(l => l.length() > 10).map(l => l.toUpperCase())
+    val linesLongUpper2 = fileLines filter(_.length() > 10) map(_.toUpperCase())
   }
 }

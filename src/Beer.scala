@@ -15,5 +15,13 @@ object Beer {
     val fileLines = Source.fromFile("data.txt").getLines().toList
     val linesLongUpper = fileLines.filter(l => l.length() > 10).map(l => l.toUpperCase())
     val linesLongUpper2 = fileLines filter(_.length() > 10) map(_.toUpperCase())
+
+    val raoul = ("Raoul", "+44 007007007")
+    val mario = ("Mario", "+34 123456789")
+
+    val tupleBooks = (2018, "Modern Java In ACtion", "Raoul-Gabriel Urma")
+    val tupleNumbers = (24, 1337, 0, 3, 114)
+    println(tupleBooks._2)
+    println(tupleNumbers._4)
   }
 }
